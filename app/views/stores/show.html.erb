@@ -1,0 +1,52 @@
+<!-- Responsive panel example-->
+
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Store</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <dl class="dl-horizontal">
+              <dt>Name</dt>
+              <dd><%= @store.name %></dd>
+
+              <dt>Address</dt>
+              <dd><%= @store.address %></dd>
+
+              <dt>Neighborhood</dt>
+              <dd><%= @store.neighborhood %></dd>
+
+<!--               <dt>Rating</dt>
+              <dd><%= @store.rating %></dd> -->
+
+              <dt>Comments</dt>
+              <dd><%= @store.comments %></dd>
+
+              <dt>User</dt>
+              <dd><%= @store.user.username %></dd>
+
+            </dl>
+            <div class="btn-group btn-group-justified">
+              <a href="/stores" class="btn btn-primary">
+                <i class="fa fa-chevron-left"></i>
+              </a>
+
+              <a href="/stores/<%= @store.id %>/edit" class="btn btn-warning">
+                <i class="fa fa-edit"></i>
+              </a>
+
+              <a href="/delete_store/<%= @store.id %>" class="btn btn-danger" rel="nofollow">
+                <i class="fa fa-trash-o"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End responsive panel example -->
