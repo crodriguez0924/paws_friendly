@@ -35,13 +35,18 @@
                 <i class="fa fa-chevron-left"></i>
               </a>
 
+              <% if current_user.id == @park.user_id %>
+
               <a href="/parks/<%= @park.id %>/edit" class="btn btn-warning">
                 <i class="fa fa-edit"></i>
               </a>
+              <% end %>
 
+              <% if current_user.id == @park.user_id %>
               <a href="/delete_park/<%= @park.id %>" class="btn btn-danger" rel="nofollow">
                 <i class="fa fa-trash-o"></i>
               </a>
+              <%end%>
             </div>
           </div>
         </div>
